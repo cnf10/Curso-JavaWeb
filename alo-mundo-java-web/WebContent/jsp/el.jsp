@@ -9,9 +9,12 @@
 <body>
 	
 	<form action="el2.jsp" method="post">
-		Nome: <input name="nome"/> <br/>
-		Endereço: <input name="endereco"/> <br/>
-		Versão: <input name="versao"/> <br/>
+		Nome: <input name="nome" value="${param['nome']}"/> <br/>
+		Endereço: <input name="endereco" value="${param['endereco']}"/> <br/>
+		Versão: <input name="versao" value="${param['versao']}"/> <br/>
+		Musicas: <input type="checkbox" name="musicas" value="Samba"/> Samba<br/>
+		<input type="checkbox" name="musicas" value="Forro"/> Forró<br/>
+		<input type="checkbox" name="musicas" value="mpb"/> MPB<br/>
 	
 		<input type="submit" value="Enviar"/>
 	</form>

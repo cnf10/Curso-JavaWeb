@@ -8,9 +8,16 @@
 </head>
 <body>
 
-	Nome é: ${param['nome']} <br/>
-	Endereço é: ${param['endereco']} <br/>
-	Version é: ${param['versao']} <br/>
+	<form action="el.jsp" method="post">
+		Nome: <input name="nome" value="${param['nome']}"/> <br/>
+		Endereço: <input name="endereco" value="${param['endereco']}"/> <br/>
+		Versão: <input name="versao" value="${param['versao']}"/> <br/>
+	
+		Músicas: ${empty paramValues.musicas ? 
+			'Nenhuma música foi selecionada' : paramValues.musicas[0]}
+	
+		<input type="submit" value="Enviar"/>
+	</form>
 
 </body>
 </html>
